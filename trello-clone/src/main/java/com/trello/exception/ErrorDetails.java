@@ -1,4 +1,4 @@
-package com.maersk.exception;
+package com.trello.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,7 +1,7 @@
-package com.maersk.pojo;
+package com.trello.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.maersk.entity.Card;
+import com.trello.entity.Card;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,6 +1,6 @@
-package com.maersk.dao;
+package com.trello.dao;
 
-import com.maersk.entity.Board;
+import com.trello.entity.Board;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

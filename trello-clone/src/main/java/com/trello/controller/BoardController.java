@@ -1,12 +1,10 @@
-package com.maersk.controller;
+package com.trello.controller;
 
-import com.maersk.entity.Board;
-import com.maersk.entity.Card;
-import com.maersk.exception.BoardException;
-import com.maersk.pojo.Boards;
-import com.maersk.pojo.Cards;
-import com.maersk.service.BoardService;
-import com.maersk.service.CardService;
+import com.trello.exception.BoardException;
+import com.trello.pojo.Boards;
+import com.trello.pojo.Cards;
+import com.trello.service.BoardService;
+import com.trello.service.CardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;

@@ -1,7 +1,7 @@
-package com.maersk.advice;
+package com.trello.advice;
 
-import com.maersk.exception.BoardException;
-import com.maersk.exception.ErrorDetails;
+import com.trello.exception.BoardException;
+import com.trello.exception.ErrorDetails;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

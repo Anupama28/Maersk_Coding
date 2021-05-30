@@ -1,12 +1,11 @@
-package com.maersk.service;
+package com.trello.service;
 
-import com.maersk.dao.CardRepository;
-import com.maersk.dao.ColumnRepository;
-import com.maersk.dao.UserRepository;
-import com.maersk.entity.BoardColumn;
-import com.maersk.entity.Card;
-import com.maersk.entity.User;
-import com.maersk.pojo.Cards;
+import com.trello.dao.CardRepository;
+import com.trello.dao.ColumnRepository;
+import com.trello.dao.UserRepository;
+import com.trello.entity.BoardColumn;
+import com.trello.entity.User;
+import com.trello.pojo.Cards;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

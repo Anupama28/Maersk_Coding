@@ -1,6 +1,6 @@
-package com.maersk.dao;
+package com.trello.dao;
 
-import com.maersk.entity.Card;
+import com.trello.entity.Card;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.maersk.entity;
+package com.trello.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

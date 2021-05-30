@@ -1,4 +1,4 @@
-package com.maersk.entity;
+package com.trello.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,17 +16,15 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "column")
-public class BoardColumn {
+@Table(name = "board")
+public class Board {
     @Id
     @GeneratedValue
     private Integer id;
 
-    @Column(name="column_name")
-    private String columnName;
+    @Column(name="board_name")
+    private String boardName;
 
-    @Column(name="board_id")
-    private Integer boardId;
-
-
+    @Column(name="created_by")
+    private String createdBy;
 }

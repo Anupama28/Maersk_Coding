@@ -1,21 +1,19 @@
-package com.maersk.service;
+package com.trello.service;
 
-import com.maersk.dao.BoardRepository;
-import com.maersk.dao.CardRepository;
-import com.maersk.dao.ColumnRepository;
-import com.maersk.entity.Board;
-import com.maersk.entity.BoardColumn;
-import com.maersk.entity.Card;
-import com.maersk.pojo.Boards;
-import com.maersk.pojo.Cards;
-import com.maersk.pojo.Columns;
+import com.trello.dao.BoardRepository;
+import com.trello.dao.CardRepository;
+import com.trello.dao.ColumnRepository;
+import com.trello.entity.Board;
+import com.trello.entity.BoardColumn;
+import com.trello.entity.Card;
+import com.trello.pojo.Boards;
+import com.trello.pojo.Cards;
+import com.trello.pojo.Columns;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 public class BoardService {
