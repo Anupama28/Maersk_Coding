@@ -26,7 +26,7 @@ public class BoardController {
     private CardService cardService;
 
     // Get board JSON Object
-    @RequestMapping("/board")
+    @RequestMapping("/boards")
     public ResponseEntity<List<Boards>> getAllBoards() {
         List<Boards> boardList = boardService.getAllBoard();
         if (boardList.isEmpty()) {
