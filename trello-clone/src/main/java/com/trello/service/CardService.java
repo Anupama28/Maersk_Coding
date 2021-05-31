@@ -27,7 +27,7 @@ public class CardService {
     @Autowired
     UserRepository userRepository;
 
-    public List<Cards> getAllCard(String tag) {
+    public List<Cards> getAllCardByTag(String tag) {
         List<Cards> cardList = Cards.setCartsDetails(cardRepository.findByTag(tag));
         return cardList;
     }

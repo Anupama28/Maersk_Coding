@@ -6,6 +6,8 @@ import com.trello.pojo.Cards;
 import com.trello.service.BoardService;
 import com.trello.service.CardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,51 +27,51 @@ public class BoardController {
 
     // Get board JSON Object
     @RequestMapping("/board")
-    public List<Boards> getAllBoards() {
+    public ResponseEntity<List<Boards>> getAllBoards() {
         List<Boards> boardList = boardService.getAllBoard();
         if (boardList.isEmpty()) {
             throw new BoardException("Board Not Found");
         }
-        return  boardList;
+        return new ResponseEntity<>(boardList, HttpStatus.OK);
     }
 
     //Get  list of cards that containing tag
     @RequestMapping("/cards/{tag}")
-    public List<Cards> getAllCards(@PathVariable String tag){
-        List<Cards> cardList =  cardService.getAllCard(tag);
+    public ResponseEntity<List<Cards>> getAllCardsByTag(@PathVariable String tag){
+        List<Cards> cardList =  cardService.getAllCardByTag(tag);
         if(cardList.isEmpty()) {
             throw new BoardException("Card Not Found");
         }
-        return cardList;
+        return new ResponseEntity<>(cardList, HttpStatus.OK);
     }
 
     //Get list of cards in a column
     @RequestMapping("/column/cards/{columnName}")
-    public List<Cards> getAllCardsInColumn(@PathVariable String columnName){
+    public ResponseEntity<List<Cards>> getAllCardsInColumn(@PathVariable String columnName){
         List<Cards> cardList =  cardService.getAllCardByColumn(columnName);
         if(cardList.isEmpty()) {
             throw new BoardException("Card Not Found");
         }
-        return  cardList;
+        return new ResponseEntity<>(cardList, HttpStatus.OK);
     }
     //Get list of cards based on created time
     @RequestMapping("/column/cards")
-    public List<Cards> getAllCardByTimestamp(@RequestParam String timestamp) {
+    public ResponseEntity<List<Cards>> getAllCardByTimestamp(@RequestParam String timestamp) {
         List<Cards> cardList =  cardService.getAllCardByTimestamp(timestamp);
         if(cardList.isEmpty()) {
             throw new BoardException("Card Not Found");
         }
-        return cardList;
+        return new ResponseEntity<>(cardList, HttpStatus.OK);
     }
 
     //Get Highlighted Card
     @RequestMapping("/highlightedCard")
-    public List<Cards> getHighlightedCard(@RequestHeader("user-id") String userId) {
+    public ResponseEntity<List<Cards>> getHighlightedCard(@RequestHeader("user-id") String userId) {
         List<Cards> cardList = cardService.getHighlightedCard(userId);
         if(cardList.isEmpty()) {
             throw new BoardException("Highlighted Card Not Found");
         }
-        return cardList;
+        return new ResponseEntity<>(cardList, HttpStatus.OK);
     }
 }
 
